@@ -65,3 +65,10 @@ A cloud-native **2-tier application**: Flask frontend with MySQL backend, great 
 ```bash
 # Clone this repository
 git clone https://github.com/Prasadk1618/Projects.git
+cd projects
+
+# Go to any project directory
+cd Expenses-Tracker-WebApp
+
+# Build and run the app (example with Docker Compose)
+docker compose up --build
