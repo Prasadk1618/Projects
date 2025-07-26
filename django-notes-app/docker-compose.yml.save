@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx
+    port:
+      - "80:80"
+    restart: always
+
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    enviroment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - notes-app
+
+  django:
+    build:
+      context: .
+    container_name: django_cont
+    env_file:
+      - ".env"
+    restart
+
+
+volumes:
+  mysql-data:
+
+ networks:
+  notes-app:
+

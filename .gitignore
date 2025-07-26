@@ -1,0 +1,21 @@
+# Ignore compiled files and logs
+*.log
+*.swp
+*.pyc
+__pycache__/
+
+# Ignore dependency directories
+node_modules/
+.env
+
+# Ignore build files
+target/
+build/
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Docker-related
+*.pid
+docker-compose.override.yml
